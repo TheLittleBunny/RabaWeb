@@ -8,6 +8,7 @@ export default function WikiHome() {
     { name: "Materiales", icon: "💎", href: "/wiki/materiales" },
     { name: "Razas", icon: "🧬", href: "/wiki/razas" },
     { name: "Estadísticas", icon: "📊", href: "/wiki/estadisticas" },
+    { name: "Mecánicas", icon: "⚙️", href: "/wiki/mecanicas" },
     { name: "Guía Inicio", icon: "📖", href: "/wiki/guia-inicio" },
     { name: "Jefes", icon: "☠️", href: "#" },
     { name: "Mascotas", icon: "🐾", href: "#" },
