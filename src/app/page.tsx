@@ -1,66 +1,41 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+import WikiCard from '@/components/WikiCard';
 
 export default function Home() {
+  const featuredItems = [
+    { name: "Void Scythe", rarity: "Legendary" as const, category: "Weapon", description: "A powerful scythe forged from the void itself. Deals massive damage." },
+    { name: "Homing Bullet", rarity: "Rare" as const, category: "Ammunition", description: "Projectiles that seek out their targets with high precision." },
+    { name: "Human", rarity: "Common" as const, category: "Race", description: "The standard race with balanced stats." },
+    { name: "Demihuman", rarity: "Uncommon" as const, category: "Race", description: "A race with enhanced physical capabilities." },
+    { name: "Arena Ticket", rarity: "Common" as const, category: "Material", description: "Used to enter the PVE Arena." },
+    { name: "Excalibur", rarity: "Mythic" as const, category: "Weapon", description: "The legendary sword of kings." },
+  ];
+
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className={styles.intro}>
-          <h1>To get started, edit the page.tsx file.</h1>
-          <p>
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className={styles.secondary}
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
+    <div>
+      <div style={{ marginBottom: "2rem", textAlign: "center" }}>
+        <h1 style={{ fontSize: "2.5rem", color: "var(--accent-color)" }}>RabaWeb Wiki</h1>
+        <p>Explore the items, races, and mechanics of RabaCore & RabaPVP.</p>
+      </div>
+
+      <h2 style={{ borderBottom: "1px solid var(--border-color)", paddingBottom: "0.5rem", marginBottom: "1rem" }}>
+        Featured Content
+      </h2>
+      
+      <div style={{ 
+        display: "grid", 
+        gridTemplateColumns: "repeat(auto-fill, minmax(300px, 1fr))", 
+        gap: "1.5rem" 
+      }}>
+        {featuredItems.map((item, index) => (
+          <WikiCard 
+            key={index}
+            name={item.name}
+            rarity={item.rarity}
+            category={item.category}
+            description={item.description}
+          />
+        ))}
+      </div>
     </div>
   );
 }
