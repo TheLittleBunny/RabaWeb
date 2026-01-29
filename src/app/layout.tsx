@@ -9,8 +9,15 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Wiki de RabaWeb",
-  description: "Wiki oficial para RabaPlugins",
+  title: "Wiki Oficial de Rabanitos SMP",
+  description: "La wiki oficial de Rabanitos SMP. Encuentra información sobre razas, estadísticas, mecánicas y más.",
+  openGraph: {
+    title: "Wiki Oficial de Rabanitos SMP",
+    description: "La wiki oficial de Rabanitos SMP. Encuentra información sobre razas, estadísticas, mecánicas y más.",
+    type: "website",
+    locale: "es_MX",
+    siteName: "RabanitosWiki",
+  },
 };
 
 export default function RootLayout({
