@@ -1,4 +1,5 @@
 import WikiCard from '@/components/WikiCard';
+import styles from './page.module.css';
 
 export default function Home() {
   const featuredItems = [
@@ -11,31 +12,41 @@ export default function Home() {
   ];
 
   return (
-    <div>
-      <div style={{ marginBottom: "2rem", textAlign: "center" }}>
-        <h1 style={{ fontSize: "2.5rem", color: "var(--accent-color)" }}>Wiki de RabaWeb</h1>
-        <p>Explora los ítems, razas y mecánicas de RabaCore y RabaPVP.</p>
-      </div>
+    <div className={styles.container}>
+      {/* Hero Section */}
+      <section className={styles.hero}>
+        <div className={styles.heroBanner}>
+          <div className={styles.heroContent}>
+            <span className={styles.updateTag}>ACTUALIZACIÓN FEBRERO 2026</span>
+            <h1 className={styles.heroTitle}>La Era del Vacío</h1>
+            <p className={styles.heroText}>
+              Descubre nuevas armas, enfréntate a jefes legendarios y domina la arena 
+              en nuestra actualización más grande hasta la fecha.
+            </p>
+            <button className={styles.ctaButton}>Leer Notas del Parche</button>
+          </div>
+        </div>
+      </section>
 
-      <h2 style={{ borderBottom: "1px solid var(--border-color)", paddingBottom: "0.5rem", marginBottom: "1rem" }}>
-        Contenido Destacado
-      </h2>
-      
-      <div style={{ 
-        display: "grid", 
-        gridTemplateColumns: "repeat(auto-fill, minmax(300px, 1fr))", 
-        gap: "1.5rem" 
-      }}>
-        {featuredItems.map((item, index) => (
-          <WikiCard 
-            key={index}
-            name={item.name}
-            rarity={item.rarity}
-            category={item.category}
-            description={item.description}
-          />
-        ))}
-      </div>
+      {/* Featured Grid */}
+      <section className={styles.featured}>
+        <div className={styles.sectionHeader}>
+          <h2 className={styles.sectionTitle}>Wiki Destacada</h2>
+          <div className={styles.divider}></div>
+        </div>
+        
+        <div className={styles.grid}>
+          {featuredItems.map((item, index) => (
+            <WikiCard 
+              key={index}
+              name={item.name}
+              rarity={item.rarity}
+              category={item.category}
+              description={item.description}
+            />
+          ))}
+        </div>
+      </section>
     </div>
   );
 }

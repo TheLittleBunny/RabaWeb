@@ -1,30 +1,32 @@
 :root {
-  /* Colors - Dark Theme */
-  --bg-primary: #121212;
-  --bg-secondary: #1e1e1e;
-  --bg-tertiary: #2d2d2d;
+  /* Premium Dark Theme (Catcraft Inspired) */
+  --bg-primary: #0b0d12;       /* Very dark background */
+  --bg-secondary: #161b26;     /* Navbars, Sidebars */
+  --bg-tertiary: #1f2532;      /* Cards, Inputs */
+  --bg-hover: #2a3245;
 
-  --text-primary: #e0e0e0;
-  --text-secondary: #a0a0a0;
-  --text-tertiary: #707070;
+  --text-primary: #ffffff;
+  --text-secondary: #94a3b8;   /* Blue-ish gray */
+  --text-tertiary: #64748b;
 
-  --accent-color: #ffaa00; /* Gold */
-  --accent-hover: #ffcc00;
-
-  --border-color: #333333;
-
-  /* Rarity Colors */
-  --rarity-common: #ffffff;
-  --rarity-uncommon: #55ff55;
-  --rarity-rare: #5555ff;
-  --rarity-epic: #aa00aa;
-  --rarity-legendary: #ffaa00;
-  --rarity-mythic: #ff55ff;
-
+  --accent-color: #f59e0b;     /* Gold/Orange highlight */
+  --accent-hover: #d97706;
+  
+  --border-color: #2e3646;
+  
+  /* Rarity Colors (Retained but adjusted for contrast) */
+  --rarity-common: #cbd5e1;
+  --rarity-uncommon: #4ade80;
+  --rarity-rare: #60a5fa;
+  --rarity-epic: #c084fc;
+  --rarity-legendary: #fbbf24;
+  --rarity-mythic: #f472b6;
+  
   /* Layout */
-  --sidebar-width: 250px;
-  --header-height: 60px;
-  --max-width: 1200px;
+  --sidebar-width: 260px;
+  --header-height: 70px;
+  --max-width: 1400px;
+  --radius: 12px;
 }
 
 * {
@@ -39,18 +41,7 @@ body {
   overflow-x: hidden;
   background-color: var(--bg-primary);
   color: var(--text-primary);
-  font-family:
-    "Inter",
-    -apple-system,
-    BlinkMacSystemFont,
-    "Segoe UI",
-    Roboto,
-    Oxygen,
-    Ubuntu,
-    Cantarell,
-    "Open Sans",
-    "Helvetica Neue",
-    sans-serif;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 a {
@@ -58,19 +49,15 @@ a {
   text-decoration: none;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1, h2, h3, h4, h5, h6 {
   color: var(--text-primary);
-  font-weight: 700;
+  font-weight: 800;
+  letter-spacing: -0.02em;
   margin-bottom: 0.5rem;
 }
 
 p {
-  line-height: 1.6;
+  line-height: 1.7;
   color: var(--text-secondary);
   margin-bottom: 1rem;
 }
@@ -79,16 +66,13 @@ p {
 ::-webkit-scrollbar {
   width: 8px;
 }
-
 ::-webkit-scrollbar-track {
-  background: var(--bg-primary);
+  background: var(--bg-primary); 
 }
-
 ::-webkit-scrollbar-thumb {
-  background: var(--bg-tertiary);
+  background: var(--bg-tertiary); 
   border-radius: 4px;
 }
-
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--text-tertiary);
+  background: var(--text-tertiary); 
 }

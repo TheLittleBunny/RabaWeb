@@ -9,42 +9,104 @@
   position: sticky;
   top: 0;
   z-index: 100;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+}
+
+.brand {
+  flex: 1;
 }
 
 .logo {
-  font-weight: 800;
-  font-size: 1.2rem;
-  color: var(--accent-color);
-  letter-spacing: 0.5px;
-}
-
-.searchContainer {
-  flex: 1;
-  max-width: 500px;
-  margin: 0 2rem;
-}
-
-.searchInput {
-  width: 100%;
-  padding: 0.5rem 1rem;
-  background-color: var(--bg-tertiary);
-  border: 1px solid var(--border-color);
-  border-radius: 4px;
+  font-weight: 900;
+  font-size: 1.5rem;
   color: var(--text-primary);
-  outline: none;
-  font-family: inherit;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  background: linear-gradient(135deg, #fff 0%, #cbd5e1 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-.searchInput:focus {
-  border-color: var(--accent-color);
+.centerNav {
+  display: flex;
+  gap: 2rem;
+  background-color: rgba(255,255,255,0.03);
+  padding: 0.5rem 1.5rem;
+  border-radius: 50px;
+  border: 1px solid rgba(255,255,255,0.05);
 }
 
-.links a {
+.navLink {
   color: var(--text-secondary);
-  font-size: 0.9rem;
-  transition: color 0.2s;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: all 0.2s;
+  position: relative;
 }
 
-.links a:hover {
+.navLink:hover {
   color: var(--text-primary);
+}
+
+.navLink::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--accent-color);
+  transition: width 0.3s;
+  border-radius: 2px;
+}
+
+.navLink:hover::after {
+  width: 100%;
+}
+
+.actions {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  align-items: center;
+}
+
+.ipContainer {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: var(--bg-tertiary);
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-family: monospace;
+  cursor: pointer;
+  border: 1px solid var(--border-color);
+  transition: all 0.2s;
+  color: var(--rarity-uncommon);
+}
+
+.ipContainer:hover {
+  border-color: var(--rarity-uncommon);
+  background-color: rgba(74, 222, 128, 0.1);
+}
+
+.storeButton {
+  background-color: var(--accent-color);
+  color: #000;
+  border: none;
+  padding: 0.6rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+}
+
+.storeButton:hover {
+  background-color: var(--accent-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(245, 158, 11, 0.3);
 }
