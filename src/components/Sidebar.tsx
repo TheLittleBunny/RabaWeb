@@ -6,21 +6,21 @@ export default function Sidebar() {
     <aside className={styles.sidebar}>
       <div className={styles.section}>
         <h3 className={styles.sectionTitle}>General</h3>
-        <Link href="/" className={styles.link}>Home</Link>
-        <Link href="/wiki/getting-started" className={styles.link}>Getting Started</Link>
+        <Link href="/" className={styles.link}>Inicio</Link>
+        <Link href="/wiki/guia-inicio" className={styles.link}>Guía de Inicio</Link>
       </div>
       
       <div className={styles.section}>
-        <h3 className={styles.sectionTitle}>Items</h3>
-        <Link href="/wiki/weapons" className={styles.link}>Weapons</Link>
-        <Link href="/wiki/armor" className={styles.link}>Armor</Link>
-        <Link href="/wiki/materials" className={styles.link}>Materials</Link>
+        <h3 className={styles.sectionTitle}>Ítems</h3>
+        <Link href="/wiki/armas" className={styles.link}>Armas</Link>
+        <Link href="/wiki/armaduras" className={styles.link}>Armaduras</Link>
+        <Link href="/wiki/materiales" className={styles.link}>Materiales</Link>
       </div>
 
       <div className={styles.section}>
-        <h3 className={styles.sectionTitle}>Mechanics</h3>
-        <Link href="/wiki/races" className={styles.link}>Races</Link>
-        <Link href="/wiki/stats" className={styles.link}>Stats</Link>
+        <h3 className={styles.sectionTitle}>Mecánicas</h3>
+        <Link href="/wiki/razas" className={styles.link}>Razas</Link>
+        <Link href="/wiki/estadisticas" className={styles.link}>Estadísticas</Link>
       </div>
     </aside>
   );

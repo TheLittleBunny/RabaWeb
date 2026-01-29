@@ -10,7 +10,7 @@ export default function Navbar() {
       <div className={styles.searchContainer}>
         <input 
           type="text" 
-          placeholder="Search items..." 
+          placeholder="Buscar ítems..." 
           className={styles.searchInput}
         />
       </div>
