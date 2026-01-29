@@ -21,7 +21,7 @@ export default function Navbar() {
       
       <div className={styles.centerNav}>
         <Link href="/" className={styles.navLink}>Inicio</Link>
-        <Link href="/wiki/guia-inicio" className={styles.navLink}>Wiki</Link>
+        <Link href="/wiki" className={styles.navLink}>Wiki</Link>
         <Link href="#" className={styles.navLink}>Reglas</Link>
         <Link href="https://discord.gg/6MJbuuzKnH" target="_blank" className={styles.navLink}>Discord</Link>
       </div>
