@@ -10,7 +10,7 @@ export default function Footer() {
           <h3 className={styles.title}>Sobre Nosotros</h3>
           <p className={styles.description}>
             Rabanitos SMP es un servidor de Minecraft Survival Semi-RPG que busca ampliar y mejorar la experiencia vanilla. 
-            Con mecánicas únicas, nuevas armas inspiradas en el vacío, y un mundo por explorar, 
+            Con mecánicas únicas, nuevas armas, armaduras, mobs personalizados, y un mundo por explorar, 
             ¡es el lugar perfecto para tu próxima aventura!
           </p>
         </div>

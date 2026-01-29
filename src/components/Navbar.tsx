@@ -23,7 +23,7 @@ export default function Navbar() {
         <Link href="/" className={styles.navLink}>Inicio</Link>
         <Link href="/wiki/guia-inicio" className={styles.navLink}>Wiki</Link>
         <Link href="#" className={styles.navLink}>Reglas</Link>
-        <Link href="#" className={styles.navLink}>Discord</Link>
+        <Link href="https://discord.gg/6MJbuuzKnH" target="_blank" className={styles.navLink}>Discord</Link>
       </div>
 
       <div className={styles.actions}>
