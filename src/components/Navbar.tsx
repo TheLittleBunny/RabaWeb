@@ -28,7 +28,6 @@ export default function Navbar() {
 
       <div className={styles.actions}>
         <div className={styles.ipContainer} onClick={copyIp}>
-          <span className={styles.ipIcon}>🎮</span>
           <span className={styles.ipText}>{copied ? "¡Copiado!" : serverIp}</span>
         </div>
         <button className={styles.storeButton}>

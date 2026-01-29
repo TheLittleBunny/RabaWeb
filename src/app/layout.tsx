@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import Navbar from "@/components/Navbar";
-import Sidebar from "@/components/Sidebar";
+
+import Footer from "@/components/Footer";
+
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -18,16 +20,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={inter.className} style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
         <Navbar />
-        <div style={{ display: "flex", minHeight: "calc(100vh - var(--header-height))" }}>
-          <Sidebar />
-          <main style={{ flex: 1, padding: "2rem", width: "100%" }}>
-            <div style={{ maxWidth: "var(--max-width)", margin: "0 auto" }}>
-              {children}
-            </div>
-          </main>
+        <div style={{ flex: 1 }}>
+          {children}
         </div>
+        <Footer />
       </body>
     </html>
   );

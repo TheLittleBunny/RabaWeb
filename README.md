@@ -5,14 +5,14 @@ Diseñada con un estilo "Premium" inspirado en servidores de Minecraft, utilizan
 
 🔗 **Sitio Web:** [wiki.rabanitos.com](https://wiki.rabanitos.com)
 
-## 🛠️ Tecnologías
+## Tecnologías
 
 - **Framework:** [Next.js 14+](https://nextjs.org/) (App Router)
 - **Lenguaje:** TypeScript
 - **Estilos:** CSS Modules + Variables CSS (Tema Oscuro Personalizado)
 - **Hosting:** GitHub Pages (Despliegue Automático)
 
-## 🚀 Instalación y Uso Local
+## Instalación y Uso Local
 
 1.  **Instalar dependencias:**
 
@@ -34,7 +34,7 @@ Diseñada con un estilo "Premium" inspirado en servidores de Minecraft, utilizan
     ```
     Esto generará una carpeta `out/` con el sitio estático.
 
-## 📦 Despliegue Automático
+## Despliegue Automático
 
 Este proyecto usa **GitHub Actions** para publicar automáticamente en GitHub Pages.
 
@@ -47,7 +47,7 @@ Este proyecto usa **GitHub Actions** para publicar automáticamente en GitHub Pa
     ```
 3.  GitHub detectará el push, construirá el sitio y lo publicará en `wiki.rabanitos.com` automáticamente en unos minutos.
 
-## 🌐 Dominio Personalizado
+## Dominio Personalizado
 
 El dominio `wiki.rabanitos.com` está configurado mediante:
 
